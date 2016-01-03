@@ -273,7 +273,7 @@ var getGrepOption = function(clientArguments) {
             })
             .map(function(arg) {
               return arg.replace(grepRegex, '$1');
-            })[0];
+            })[0] || '';
   } else if (typeof clientArguments === 'string') {
     var match = /--grep=([^=]+)/.exec(clientArguments);
 
